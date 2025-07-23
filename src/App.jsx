@@ -65,7 +65,7 @@ const App = () => {
   // Countdown Timer
   useEffect(() => {
     const updateCountdown = () => {
-      const targetTime = new Date(Date.UTC(2025, 6, 23, 15, 0, 0)); // 3:00 PM UTC, July 23, 2025
+      const targetTime = new Date(Date.UTC(2025, 6, 23, 24, 0, 0)); // 3:00 PM UTC, July 23, 2025
       const now = new Date();
       const timeDiff = targetTime - now;
 
@@ -537,7 +537,7 @@ const App = () => {
             <p className="section-text">CA: SOON</p>
             <p className="section-text">X: </p>
             <p className="section-text">
-              Ape small, shill hard! Join the divine network at 3:00 PM UTC to unleash Arceus AI’s cosmic utility.
+              Ape small, shill hard! Join the divine network to unleash Arceus AI’s cosmic utility.
             </p>
             <p className="section-text">
               Utility: Engage with Arceus AI to access real-time insights, create immersive experiences, and amplify projects with divine intelligence. Shill the vision, build the community, and shape the multiverse!
