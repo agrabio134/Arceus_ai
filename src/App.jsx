@@ -77,7 +77,7 @@ const App = () => {
       const hours = Math.floor(timeDiff / (1000 * 60 * 60));
       const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-      setCountdown(`Launch: ${hours}h ${minutes}m ${seconds}s`);
+      setCountdown(`AI Launch: ${hours}h ${minutes}m ${seconds}s`);
     };
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
