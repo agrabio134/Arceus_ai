@@ -31,7 +31,7 @@ const App = () => {
   const [countdown, setCountdown] = useState('Calculating...');
   const [amount, setAmount] = useState('');
   const [tokenIn, setTokenIn] = useState('0x2::sui::SUI');
-  const [tokenOut, setTokenOut] = useState('');
+  const [tokenOut, setTokenOut] = useState('0xe9ed4dbeb222239d6433fcb8f956b8db6f7c0b0a466505846f6d0121160b59ff::arceus::ARCEUS');
   const [tokenInDecimals, setTokenInDecimals] = useState(9);
   const [tokenOutDecimals, setTokenOutDecimals] = useState(9);
   const [tokenInSearch, setTokenInSearch] = useState('SUI');
@@ -55,7 +55,7 @@ const App = () => {
     },
     {
       symbol: 'POKEGOD',
-      address: '',
+      address: '0xe9ed4dbeb222239d6433fcb8f956b8db6f7c0b0a466505846f6d0121160b59ff::arceus::ARCEUS',
       decimals: 9,
       logo: '/aceus-logo.png',
       verified: true,
