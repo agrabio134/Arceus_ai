@@ -65,7 +65,7 @@ const App = () => {
   // Countdown Timer
   useEffect(() => {
     const updateCountdown = () => {
-      const targetTime = new Date(Date.UTC(2025, 6, 24, 4, 0, 0)); // 3:00 PM UTC, July 23, 2025
+      const targetTime = new Date(Date.UTC(2025, 6, 26, 4, 0, 0)); // 3:00 PM UTC, July 23, 2025
       const now = new Date();
       const timeDiff = targetTime - now;
 
