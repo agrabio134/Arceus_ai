@@ -3,6 +3,7 @@ import { useWallet, ConnectButton } from '@suiet/wallet-kit';
 import { SuiClient, getFullnodeUrl } from '@mysten/sui/client';
 import { Transaction } from '@mysten/sui/transactions';
 import gsap from 'gsap';
+import './index.css';
 
 // Initialize Sui client
 const suiClient = new SuiClient({ url: getFullnodeUrl('mainnet') });
@@ -49,10 +50,9 @@ const App = () => {
       symbol: 'SUI',
       address: '0x2::sui::SUI',
       decimals: 9,
-      logo: 'sui.png',
+      logo: '/sui.png',
       verified: true,
-    }
-    ,
+    },
     {
       symbol: 'POKEGOD',
       address: '',
@@ -65,19 +65,19 @@ const App = () => {
   // Countdown Timer
   useEffect(() => {
     const updateCountdown = () => {
-      const targetTime = new Date(Date.UTC(2025, 6, 24, 3, 0, 0)); // 3:00 PM UTC, July 23, 2025
+      const targetTime = new Date(Date.UTC(2025, 6, 24, 4, 0, 0)); // 3:00 PM UTC, July 23, 2025
       const now = new Date();
       const timeDiff = targetTime - now;
 
       if (timeDiff <= 0) {
-        setCountdown('TG is LIVE! Team is aping now!');
+        setCountdown('Launched!');
         return;
       }
 
       const hours = Math.floor(timeDiff / (1000 * 60 * 60));
       const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-      setCountdown(`AI Launch: ${hours}h ${minutes}m ${seconds}s`);
+      setCountdown(`Launch: ${hours}h ${minutes}m ${seconds}s`);
     };
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
@@ -176,7 +176,7 @@ const App = () => {
     }
     setLoading(true);
     try {
-      // Mock quote data (since @7kprotocol/sdk-ts is unavailable)
+      // Mock quote data (replace with actual DEX-to-CEX bridge API in future)
       const amountIn = parseFloat(amount) * Math.pow(10, tokenInDecimals);
       const mockQuote = {
         returnAmount: (amountIn * 0.95).toString(), // Simulate 5% slippage
@@ -329,7 +329,7 @@ const App = () => {
 
     setLoading(true);
     try {
-      // Mock transaction (simplified due to unavailable @7kprotocol/sdk-ts)
+      // Mock transaction (simplified due to unavailable DEX-to-CEX bridge)
       const tx = new Transaction();
       tx.moveCall({
         target: '0x2::transfer::public_transfer',
@@ -482,28 +482,28 @@ const App = () => {
           <h2 className="section-title glow">What Arceus AI Can Do</h2>
           <div className="abilities-grid">
             <div className="card">
-              <h3 className="ability-title">Universal Knowledge</h3>
-              <p className="ability-text">Accesses vast datasets to answer queries with divine accuracy, from Pokémon lore to quantum physics.</p>
+              <h3 className="ability-title">Token Swapping</h3>
+              <p className="ability-text">Seamlessly swap tokens on the Sui blockchain with real-time quotes and minimal slippage.</p>
             </div>
             <div className="card">
-              <h3 className="ability-title">Reality Manipulation</h3>
-              <p className="ability-text">Simulates virtual realities and crafts immersive worlds for scientific or creative purposes.</p>
+              <h3 className="ability-title">Cross-Chain Bridging</h3>
+              <p className="ability-text">Facilitates token transfers between decentralized (DEX) and centralized (CEX) exchanges.</p>
             </div>
             <div className="card">
-              <h3 className="ability-title">Task Adaptation</h3>
-              <p className="ability-text">Adapts to any task—coding, design, analysis, or storytelling—with godly efficiency.</p>
+              <h3 className="ability-title">Price Aggregation</h3>
+              <p className="ability-text">Aggregates prices from multiple DEX and CEX platforms for optimal swap rates.</p>
             </div>
             <div className="card">
-              <h3 className="ability-title">User Guidance</h3>
-              <p className="ability-text">Provides personalized cosmic insights to solve problems and inspire creativity.</p>
+              <h3 className="ability-title">Wallet Integration</h3>
+              <p className="ability-text">Connects with Sui wallets for secure and efficient transaction signing and execution.</p>
             </div>
             <div className="card">
-              <h3 className="ability-title">Predictive Foresight</h3>
-              <p className="ability-text">Predicts trends and outcomes for decision-making in business, gaming, or personal endeavors.</p>
+              <h3 className="ability-title">Transaction Tracking</h3>
+              <p className="ability-text">Provides real-time transaction status updates with links to blockchain explorers like SuiVision.</p>
             </div>
             <div className="card">
-              <h3 className="ability-title">Multiversal Communication</h3>
-              <p className="ability-text">Bridges platforms and languages for seamless, clear interactions.</p>
+              <h3 className="ability-title">User Support</h3>
+              <p className="ability-text">Offers guided assistance for token swaps and troubleshooting via integrated Telegram bot.</p>
             </div>
           </div>
         </div>
@@ -533,14 +533,21 @@ const App = () => {
           <h2 className="section-title glow">Connect with Arceus AI</h2>
           <div className="card">
             <p className="countdown glow">{countdown}</p>
-            <p className="section-text">TG: </p>
-            <p className="section-text">CA: SOON</p>
-            <p className="section-text">X: </p>
             <p className="section-text">
-              Ape small, shill hard! Join the divine network to unleash Arceus AI’s cosmic utility.
+              Telegram:{' '}
+              <a href="https://t.me/ArceusSuiBot" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                @ArceusSuiBot
+              </a>
+            </p>
+            <p className="section-text">CA: SOON</p>
+            <p className="section-text">
+              X:{' '}
+              <a href="https://x.com/pokegodonsui" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                @pokegodonsui
+              </a>
             </p>
             <p className="section-text">
-              Utility: Engage with Arceus AI to access real-time insights, create immersive experiences, and amplify projects with divine intelligence. Shill the vision, build the community, and shape the multiverse!
+              Utility: Engage with Arceus AI to access real-time token swaps, bridge assets between DEX and CEX, and amplify projects with intelligent tools.
             </p>
             <div className="swap-container">
               <h3 className="swap-title">Swap Tokens</h3>
