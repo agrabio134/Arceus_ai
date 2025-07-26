@@ -54,7 +54,7 @@ const App = () => {
       verified: true,
     },
     {
-      symbol: 'POKEGOD',
+      symbol: 'Arceus',
       address: '0xe9ed4dbeb222239d6433fcb8f956b8db6f7c0b0a466505846f6d0121160b59ff::arceus::ARCEUS',
       decimals: 9,
       logo: '/aceus-logo.png',
