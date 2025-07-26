@@ -31,11 +31,11 @@ const App = () => {
   const [countdown, setCountdown] = useState('Calculating...');
   const [amount, setAmount] = useState('');
   const [tokenIn, setTokenIn] = useState('0x2::sui::SUI');
-  const [tokenOut, setTokenOut] = useState('0xe9ed4dbeb222239d6433fcb8f956b8db6f7c0b0a466505846f6d0121160b59ff::arceus::ARCEUS');
+  const [tokenOut, setTokenOut] = useState('');
   const [tokenInDecimals, setTokenInDecimals] = useState(9);
   const [tokenOutDecimals, setTokenOutDecimals] = useState(9);
   const [tokenInSearch, setTokenInSearch] = useState('SUI');
-  const [tokenOutSearch, setTokenOutSearch] = useState('Arceus');
+  const [tokenOutSearch, setTokenOutSearch] = useState('POKEGOD');
   const [tokenInBalance, setTokenInBalance] = useState(null);
   const [tokenOutBalance, setTokenOutBalance] = useState(null);
   const [quote, setQuote] = useState(null);
@@ -54,8 +54,8 @@ const App = () => {
       verified: true,
     },
     {
-      symbol: 'Arceus',
-      address: '0xe9ed4dbeb222239d6433fcb8f956b8db6f7c0b0a466505846f6d0121160b59ff::arceus::ARCEUS',
+      symbol: 'POKEGOD',
+      address: '',
       decimals: 9,
       logo: '/aceus-logo.png',
       verified: true,
@@ -539,7 +539,7 @@ const App = () => {
                 @ArceusSuiBot
               </a>
             </p>
-            <p className="section-text">CA: 0xe9ed4dbeb222239d6433fcb8f956b8db6f7c0b0a466505846f6d0121160b59ff::arceus::ARCEUS</p>
+            <p className="section-text">CA: SOON</p>
             <p className="section-text">
               X:{' '}
               <a href="https://x.com/pokegodonsui" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
