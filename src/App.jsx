@@ -35,7 +35,7 @@ const App = () => {
   const [tokenInDecimals, setTokenInDecimals] = useState(9);
   const [tokenOutDecimals, setTokenOutDecimals] = useState(9);
   const [tokenInSearch, setTokenInSearch] = useState('SUI');
-  const [tokenOutSearch, setTokenOutSearch] = useState('POKEGOD');
+  const [tokenOutSearch, setTokenOutSearch] = useState('Arceus');
   const [tokenInBalance, setTokenInBalance] = useState(null);
   const [tokenOutBalance, setTokenOutBalance] = useState(null);
   const [quote, setQuote] = useState(null);
